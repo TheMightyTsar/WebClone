@@ -1,20 +1,23 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import { AuthContext } from '../auth/AuthContext';
-import axios from 'axios';
+import React from 'react'
 import '../assets/styles/tablero.css'
 import Tiles from "./gameboard/tiles.jsx";
 import Players from "./gameboard/players.jsx";
 import Traps from "./gameboard/traps.jsx";
-import Value from './gamebard/inventory.jsx';
-import Icon from './gamebard/userIcon.jsx';
+import tilesJson from '../assets/jsonFile/tiles.json';
+import playersJson from '../assets/jsonFile/players.json';
 import actualizations from '../assets/jsonFile/act.json'
 
 const yLength = 8;
 const xLenght = 8;
-export const GameContext = createContext(null);
 
+function randomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
 function Tablero() {
+
     const { token } = useContext(AuthContext);
     const [player, setPlayer] = useState({});
     const [trampa, setTrampa] = useState({});
@@ -136,7 +139,7 @@ function Tablero() {
         });
     }
 
-    const Traps = () => {
+    const Trampa = () => {
         const config = {
             'method': 'post',
             'url': `${import.meta.env.VITE_BACKEND_URL}/game/trap`,
@@ -153,17 +156,14 @@ function Tablero() {
             //setTrampa({trap});
             //setTipoTrampa({trapType});
 
-            const cas = {};
-            det.Casillas.map((casi) => {
-                cas[casi.id] = casi;
-            
-        })
-        setTrap(cas);
+            setTrap({det});
     })
         .catch((error) => {
             console.log(error)
+            setMsg(error.response.data);
         });
     }
+
 
     //let traps = [];
     //traps = actualizations.map(act =>(
@@ -173,10 +173,9 @@ function Tablero() {
     //    />));
     
     return(
-        <GameContext.Provider>
-        {msg.length > 0 && <div className="successMsg"> {msg} </div>}
         <div className='cuerpo'>
             <div id="tablero">
+
             traps
             {Object.values(player).map(p => 
               (
@@ -194,19 +193,16 @@ function Tablero() {
             />
               )
             )}
-            {Object.values(trap).map(item => (
+            {Object.values(trap).map(tt => (
             <Traps
-                pos={item.pos}
+                pos={tt.pos}
             />
               )
             )}
 
-            
+
             </div>
-            <div className='divBar'>
-            <p className='codigo'>Código: {code}</p>
-            <p className='icon start' onClick={Start}>Start</p>
-            </div>
+
             
             <div className="gamebar">                
             {Object.values(color).map(c => 
@@ -239,8 +235,9 @@ function Tablero() {
                     <div className="icon potion"></div>
                     <div className="icon potion"></div>
                     <div className="icon potion"></div>
-                    <div className={`icon traps`} onClick={Traps}></div>
+                    <div className='icon traps' onClick={Trampa}></div>
                 
+
                 </div>
 
                 <div className="consumables">
@@ -272,4 +269,6 @@ function Tablero() {
     )
 }
 
+
 export default Tablero
+

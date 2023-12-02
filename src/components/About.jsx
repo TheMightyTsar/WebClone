@@ -50,9 +50,7 @@ function About() {
 
         </div>
         </div>
-        <div className='divfoot'>
         <footer>IIC2513Games</footer>
-        </div>
         </>
     )
 }

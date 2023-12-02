@@ -1,18 +1,18 @@
 footer{
     font-size: small;
     background: #4d3100;
-    height: 5%;
+    height: 10%;
     position:absolute;
     left:0;
     right:0;
-    font-weight: bold;
-    color: #8a682e;
 }
 
 .gameLogo {
     background-image: url("../images/Road-to-El-dorado-02-09-2023.png");
-    height: 500px;
+    width: 110%;
+    height: 50%;
     background-size: cover;
+
     place-content: center;
     background-repeat: no-repeat;
 }
@@ -82,8 +82,5 @@ footer{
         place-items: center;
         color: rgb(50, 145, 29);
         font-weight: 500;
-    }
-    .gameLogo{
-        height: 275px;
     }
 }

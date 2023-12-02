@@ -12,6 +12,7 @@
     font-weight: 400;
     font-size: 10px;
     color: #080808;
+    text-transform: uppercase;
 }
 
 .gamebar {
@@ -43,27 +44,7 @@
     background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696113122/yellowPlayerHead_oawrim.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 60%;
-}
-.player_purple {
-    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289752/purplePlayerHead_cjilut.png");
-    background-repeat: no-repeat;
-    background-size: 160px; 
-    width: 60%;
-}
-.player_blue {
-    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289752/blueHead_julmku.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 160px;
-    width: 60%;
-}
-.player_brown {
-    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289751/brownHead_sbxzcv.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 160px; 
-    width: 60%;
+    width: 80%;
 }
 .energy {
     background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696114473/771235_ywpqdn.png");
@@ -171,46 +152,8 @@
 
 }
 
-.divEnergy{
-    color:#ffd700;
-    font-size: large;
-    font-weight: bold;
 
-}
-.divBar{
-    display: flex;
-    flex-direction: row;
 
-}
-.start{
-    color:#ffd700;
-    font-size: large;
-    font-weight: bold;
-    height: 40px;
-    width: 100px;
-    padding-top: 5px;
-    margin: auto;
-    background: #4d3100;
-    border: #f6b900 2px solid;
-}
-.codigo{
-    background: #4d3100;
-    color:#ffd700;
-    font-size:large;
-    font-weight: bold;
-    height: 40px;
-    width: 300px;
-    margin: auto;
-    border: #f6b900 2px solid;
-    padding-top: 5px;
-    
-}
-.coin{
-    background-image: url("../images/coin.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80%;
-}
 .tiles {
 
 
@@ -224,6 +167,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 .yellow{
     background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1698897311/yellowPlayer_y7blsy.png");

@@ -7,10 +7,6 @@ import Acerca from './Acerca'
 import Tablero from "./Tablero.jsx";
 import Questions from './Questions'
 import LandingPage from './LandingPage'
-import Login from '../profile/Login.jsx'
-import CheckUser from '../protected/UserCheck.jsx'
-import SignUp from '../profile/SignUp.jsx'
-import Options from './Play.jsx'
 
 function Routing(){
     return (
@@ -24,10 +20,6 @@ function Routing(){
                 <Route path={'/acerca'} element={<Acerca/>}/>
                 <Route path={'/tablero'} element={<Tablero/>}/>
                 <Route path={'/questions'} element={<Questions/>}/>
-                <Route path={'/login'} element={<Login/>}/>
-                <Route path={'/signup'} element={<SignUp/>}/>
-                <Route path={"/usercheck"} element={<CheckUser />}/>
-                <Route path={"/play"} element={< Options/>}/>
             </Routes>
         </BrowserRouter>
         </>

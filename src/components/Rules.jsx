@@ -42,7 +42,7 @@ function Rules(){
                         no contar con esta cantidad, no podrá comprar el objeto.
                     </p>
                     <p className='texto'>
-                        Las pociones le entregan algún poder al jugador por una cantidad limitada de turnos. Entre las distintas 
+                        Las pociones le entregan algún poder al jugador, similar a los amuletos. Entre las distintas 
                         pociones, se encuentran las que aumentan la energía que se recibe por turno, las que disminuyen 
                         la energía requerida para excavar y las que otorgan un mejor dado.
                     </p>
@@ -140,9 +140,7 @@ function Rules(){
             </ul>
         </div>
         </div>
-        <div className='divfoot'>
         <footer>IIC2513Games</footer>
-        </div>
         </div>
         </>
 
