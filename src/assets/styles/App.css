@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /*padding: 2rem;*/
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+}
+
+/* Style for the navigation bar links */
+.navbar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}

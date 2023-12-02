@@ -1,0 +1,42 @@
+[
+    {
+    "id":1,
+    "type":"Arenas movedizas",
+    "penalty":1
+  },
+  {
+    "id":2,
+    "type":"Serpientes",
+    "penalty":3
+  },
+  {
+    "id":3,
+    "type":"Dardos venenosos",
+    "penalty":2
+  },
+  {
+    "id":4,
+    "type":"Serpientes",
+    "penalty":3
+  },
+  {
+    "id":5,
+    "type":"Arenas movedizas",
+    "penalty":1
+  },
+  {
+    "id":6,
+    "type" :"Serpientes",
+    "penalty":3
+  },
+  {
+    "id":7,
+    "type":"Dardos venenosos",
+    "penalty":2
+  },
+  {
+    "id":8,
+    "type":"Dardos venenosos",
+    "penalty":2
+  }
+]

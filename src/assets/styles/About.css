@@ -1,0 +1,101 @@
+.creador {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.creadores{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.605);
+    justify-content: center;
+
+}
+@media screen and (max-width: 680px){
+    .creadores{
+        display: flex;
+        flex-direction: column;
+    }    
+    .photos {
+        align-self: center;
+        height: 100px;
+        width: 100px;
+    }
+    .substructure {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.605);
+    }
+}
+.photos {
+    align-self: center;
+    height: 120px;
+    width: 120px;
+}
+img {
+    padding: 5%;
+}
+.paragraph {
+    text-align: center;
+    font-size: larger;
+    color: rgb(50, 145, 29);
+    font-weight: 500;
+}
+.introduction {
+    text-align: center;
+    font-size: larger;
+    color: rgb(69, 183, 43);
+    font-weight: 500;
+    padding-bottom: 3%;
+}
+footer{
+    font-size: small;
+    position:absolute;
+    left:0;
+    right:0;
+
+}
+header{
+    background-color: rgb(50, 122, 30);
+    height: 70px;
+    width: 100%;
+}
+header a{
+    text-align: left;
+    color: rgb(205, 248, 181);
+    font-weight: bolder;
+    padding-right: 2%;
+}
+.equipo{
+    padding-bottom: 8%;
+    padding-top: 2%;
+    color: rgb(84, 176, 63);
+}
+.mision {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 38px;
+    padding-right: 5%;
+    padding-left: 3%;
+    color: rgb(50, 145, 29);
+    
+}
+.substructure{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.605);
+
+}
+.structure{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    color:rgb(19, 49, 11); 
+}
+.divfoot{
+    padding-top: 100px;
+}

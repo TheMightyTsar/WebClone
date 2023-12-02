@@ -1,0 +1,30 @@
+[
+  {
+    "tipo": "player",
+    "player": "yellow",
+    "pos": "0,5"
+
+  },
+  {
+    "tipo": "casilla",
+    "state": 2,
+    "pos": "0,5"
+
+  },
+  {
+    "tipo": "player",
+    "player": "purple",
+    "pos": "0,1"
+
+  },
+  {
+  "tipo": "casilla",
+  "state": 2,
+  "pos": "0,1"
+},
+  {
+    "tipo": "player",
+    "player": "yellow",
+    "pos": "1,7"
+  }
+]

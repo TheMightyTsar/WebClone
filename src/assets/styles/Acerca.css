@@ -1,0 +1,89 @@
+footer{
+    font-size: small;
+    background: #4d3100;
+    height: 5%;
+    position:absolute;
+    left:0;
+    right:0;
+    font-weight: bold;
+    color: #8a682e;
+}
+
+.gameLogo {
+    background-image: url("../images/Road-to-El-dorado-02-09-2023.png");
+    height: 500px;
+    background-size: cover;
+    place-content: center;
+    background-repeat: no-repeat;
+}
+
+.estructura{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.605);
+    
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(17, 47, 10);
+    font-weight: 500;
+}
+.justificar{
+    text-align: justify;
+    font-size: larger;
+    font-weight: 450;
+    color: rgb(50, 145, 29);
+    font-weight: 500;
+}
+.title{
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+.photo{
+    height: 25%;
+    width: 25%;
+    padding-left: 5%;
+}
+.parrafoa{
+    text-align: justify;
+    font-size: larger;
+    font-weight: 450;
+    padding-left: 5%;
+    place-items: center;
+    color: rgb(50, 145, 29);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 680px){
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+    .photo{
+        width: 25%;
+        padding-left: 5%;
+    }
+    .justificar{
+        text-align: justify;
+        font-size: medium;
+        font-weight: 450;
+        color: rgb(50, 145, 29);
+        font-weight: 500;
+    }
+    .parrafoa{
+        text-align: justify;
+        font-size: medium;
+        font-weight: 450;
+        padding-left: 5%;
+        place-items: center;
+        color: rgb(50, 145, 29);
+        font-weight: 500;
+    }
+    .gameLogo{
+        height: 275px;
+    }
+}

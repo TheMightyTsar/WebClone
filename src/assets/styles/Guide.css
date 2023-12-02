@@ -1,0 +1,46 @@
+.gui{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.605);
+}
+.parrafog{
+    text-align: justify;
+    font-size: larger;
+    color: rgb(50, 145, 29);
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: 500;
+}
+footer{
+    font-size: small;
+    text-align: center;
+    position:absolute;
+    left:0;
+    right:0;
+
+}
+.subtitle{
+    text-align: justify;
+    font-weight: 700;
+    padding-top: 2%;
+    padding-left: 1%;
+    font-size: larger;
+    color: rgb(10, 53, 1);
+    background-color:  rgba(50, 145, 29, 0.515);
+    width: 220px;
+    
+}
+.title{
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+@media screen and (max-width: 680px){
+    .subtitle{
+        text-align: center;
+        font-weight: 700;
+        padding-top: 2%;
+        padding-left: 1%;
+        font-size: large;
+        color: rgb(17, 47, 10);
+    }
+}

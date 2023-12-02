@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+.cuerpo {
+    margin: 0;
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1695840044/fondoWEB2_qmlkfm.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 1920px 1080px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #080808;
+}
+
+.gamebar {
+    display: grid;
+    padding-top: 10px;
+    grid-gap: 10px;
+    height: 15%;
+    grid-template-columns: repeat(6, 1fr) ;
+    background: #4d3100;
+    border: #f6b900 2px solid;
+    place-items:  center;
+
+}
+
+.icon {
+    aspect-ratio: 1 / 1;
+    place-content: center;
+    border: #f6b900 4px solid;
+    background: #2f200b;
+
+}
+
+.icon:hover {
+    border: #ffffff 4px solid;
+
+}
+
+.player_yellow {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696113122/yellowPlayerHead_oawrim.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+.player_purple {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289752/purplePlayerHead_cjilut.png");
+    background-repeat: no-repeat;
+    background-size: 160px; 
+    width: 60%;
+}
+.player_blue {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289752/blueHead_julmku.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 160px;
+    width: 60%;
+}
+.player_brown {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701289751/brownHead_sbxzcv.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 160px; 
+    width: 60%;
+}
+.energy {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696114473/771235_ywpqdn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+
+.dados {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696116341/pngwing.com_qwhspe.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
+
+.dig {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1701311660/pala1_ws9lec.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
+
+.potion {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696116514/potion_lhibnw.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
+
+.energy_holder {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 80%;
+    width: 80%;
+    place-items:  center;
+
+}
+.energy_bar {
+    height: 80%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr) ;
+    border: 2px solid #f68b00;
+    background: #f68b00;
+    grid-gap: 5px;
+
+}
+.energy_level {
+    background: #ffd700;
+    height: 100%;
+
+}
+
+.inventory {
+    display: grid;
+    grid-template-rows: 65% 30%;
+    height: 70%;
+    width: 100%;
+    place-items:  center;
+    grid-gap: 10%;
+}
+.armor-list {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    height: 80%;
+    width: 100%;
+    grid-gap: 20%;
+    place-items:  center;
+}
+.consumables {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    height: 175%;
+    width: 100%;
+    grid-gap: 20%;
+    place-items:  center;
+}
+
+.distribucion{
+    display: flex;
+    flex-direction: column;
+}
+
+    #tablero {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) ;
+    grid-template-rows:  repeat(8, 1fr);
+    min-height: 450px;
+    min-width: 450px;
+    grid-gap: 5px;
+    margin: 50px auto;
+    width: 80vh;
+    height: 80vh;
+    background: #080808;
+    border: 2px solid #080808;
+}
+
+
+
+.piramid {
+    grid-column: 2/11;
+    grid-row: 2/11;
+
+
+}
+
+.divEnergy{
+    color:#ffd700;
+    font-size: large;
+    font-weight: bold;
+
+}
+.divBar{
+    display: flex;
+    flex-direction: row;
+
+}
+.start{
+    color:#ffd700;
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    width: 100px;
+    padding-top: 5px;
+    margin: auto;
+    background: #4d3100;
+    border: #f6b900 2px solid;
+}
+.codigo{
+    background: #4d3100;
+    color:#ffd700;
+    font-size:large;
+    font-weight: bold;
+    height: 40px;
+    width: 300px;
+    margin: auto;
+    border: #f6b900 2px solid;
+    padding-top: 5px;
+    
+}
+.coin{
+    background-image: url("../images/coin.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
+.tiles {
+
+
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    min-height: 50px;
+    min-width: 50px;
+    aspect-ratio: 1 / 1;
+    place-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.yellow{
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1698897311/yellowPlayer_y7blsy.png");
+    position: relative;
+    top: 10%; left: -30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1 ;
+    grid-row: 1 ;
+    width: 100%;
+
+}
+
+.brown {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1698897311/brownPlayer_cllugd.png");
+    background-size: cover;
+    position: relative;
+    top: 10%;
+    left: 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+}
+
+.blue {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1698897311/bluePlayer_ylsek6.png");
+    background-size: cover;
+    position: relative;
+    top: -50%;
+    left: -30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+}
+
+.purple {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1698897311/purplePlayer_kuoctj.png");
+    background-size: cover;
+    position: relative;
+    top: -50%;
+    left: 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+}
+
+.trampa {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696116507/trap_q1cgwi.png");
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Trampa de barra jugador*/
+.traps {
+    background-image: url("https://res.cloudinary.com/darhaqq0v/image/upload/v1696116507/trap_q1cgwi.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
+
+.Serpientes {
+    background-image: url("../images/empty.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+}
