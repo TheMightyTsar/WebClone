@@ -10,8 +10,12 @@ Para esta entrega se tuvieron las siguientes consideraciones:
 * ### Visual:
   * Se decanto por un diseño _8-bit_ de los elementos del juego, aun hay elementos por transferir al diseño.
   * Se cambio la paleta de colores, por un diseño más _"junglesco"_ 
-* ### Observaciones:
-  * Al ajustar el CSS, en uno de los computadores se dejo de observar la imagen de fondo.
-  * El tablero se realizo primero en HTML y luego se traspaso a react, se uso el siguiente [codigo](https://codepen.io/johnnycopes/pen/yzQyMp) como referencia
-  para armar el tablero.
-  * Para crear una barra de inicio responsiva y no repetir código en todas las páginas, lo que se hizo fue agregarlo en el componente App, el cual es llamado en Main junto con el Routing.
+
+* ### Para comenzar a jugar:
+  * Primero es fundamental que se cree un usuario.
+  * Luego deberás registrarte.
+  * Ahora deberas ir al botón "Jugar", donde podrás crear una partida o unirte a una ya existente.
+  * Luego de unirte, dirigete al tablero.
+  * Aquí, una vez que los 4 jugadores lanzen el dado, se determinará el orden en base a los resultados obtenidos.
+  * Una vez que todos lancen, podrán comenzar a jugar cuando el anfitrion de la partida presione "Start".
+
