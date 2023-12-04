@@ -38,7 +38,9 @@ function Guide(){
                 deberás ingresar el código de la partida que deseas unirte. Una vez hecho esto, te unirás automaticamente a la nueva partida.
             </p>
         </div>
+        <div className='divfoot'>
         <footer>IIC2513</footer>
+        </div>
         </>
     )
 }

@@ -12,12 +12,6 @@ const ShopImg = "https://res.cloudinary.com/darhaqq0v/image/upload/v1695846601/S
 export default function Tiles(props) {
 
     let State = props.state
-    jsonAct.forEach(act => {
-        if (act.tipo === "casilla" && act.pos === props.pos) {
-            State = act.state;
-        }
-    });
-
 
     let TileImg = RockImg;
     if (State === -1){
@@ -32,7 +26,6 @@ export default function Tiles(props) {
     if (State === 1) {
         TileImg = RockImg;
     }
-
     if (State === 0) {
         TileImg = HoleImg;
     }
@@ -42,7 +35,6 @@ export default function Tiles(props) {
 
     const posY = parseInt(props.pos[2]) + 1;
     const posX = parseInt(props.pos[0]) + 1;
-
 
 
 

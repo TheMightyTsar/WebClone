@@ -31,7 +31,9 @@ function Acerca() {
         </p>
         
         </div>
+        <div className='divfoot'>
         <footer>IIC2513Games</footer>
+        </div>
         </>
     )
 }

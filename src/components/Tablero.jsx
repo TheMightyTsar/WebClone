@@ -1,39 +1,32 @@
-import React from 'react'
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { AuthContext } from '../auth/AuthContext';
+import axios from 'axios';
 import '../assets/styles/tablero.css'
 import Tiles from "./gameboard/tiles.jsx";
 import Players from "./gameboard/players.jsx";
 import Traps from "./gameboard/traps.jsx";
-import tilesJson from '../assets/jsonFile/tiles.json';
-import playersJson from '../assets/jsonFile/players.json';
+import Value from './gamebard/inventory.jsx';
+import Icon from './gamebard/userIcon.jsx';
 import actualizations from '../assets/jsonFile/act.json'
 
 const yLength = 8;
 const xLenght = 8;
+export const GameContext = createContext(null);
 
-function randomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
 
 function Tablero() {
+    const { token } = useContext(AuthContext);
+    const [player, setPlayer] = useState({});
+    const [trampa, setTrampa] = useState({});
+    const [tipoTrampa, setTipoTrampa] = useState("");
+    const [tiles, setTiles] = useState({});
+    const [msg, setMsg] = useState("");
+    const [jugador, setJugador] = useState({});
+    const [code, setCode] = useState('');
+    const [dado, setDado] = useState({});
+    const [color, setColor] = useState({});
+    const [trap, setTrap] = useState({});
 
-
-
-
-
-    const Start = () =>{
-        const { token } = useContext(AuthContext);
-        const [player, setPlayer] = useState({});
-        const [trampa, setTrampa] = useState({});
-        const [tipoTrampa, setTipoTrampa] = useState("");
-        const [tiles, setTiles] = useState({});
-        const [msg, setMsg] = useState("");
-        const [jugador, setJugador] = useState({});
-        const [code, setCode] = useState('');
-        const [dado, setDado] = useState({});
-        const [color, setColor] = useState({});
-        const [trap, setTrap] = useState({});
 
         var icon = 0
 
@@ -87,14 +80,14 @@ function Tablero() {
                 });
         }, [])
 
-        const Dado = () => {
-            const config = {
-                'method': 'get',
-                'url': `${import.meta.env.VITE_BACKEND_URL}/game/move`,
-                'headers': {
-                    'Authorization': `Bearer ${token}`
-                }
-            };
+    const Dado = () => {
+        const config = {
+            'method': 'get',
+            'url': `${import.meta.env.VITE_BACKEND_URL}/game/move`,
+            'headers': {
+                'Authorization': `Bearer ${token}`
+            }
+        };
             axios(config).then((response) => {
                 if (response.request.status == 200){
                     setMsg(response.data.data)
@@ -126,6 +119,7 @@ function Tablero() {
                     setMsg(error.response.data)
                 });
         }
+    const Start = () =>{
         const config = {
             'method': 'get',
             'url': `${import.meta.env.VITE_BACKEND_URL}/game/start`,
@@ -208,44 +202,42 @@ function Tablero() {
 
     }
 
-
     return(
         <GameContext.Provider>
+        {msg.length > 0 && <div className="successMsg"> {msg} </div>}
+        <div className='cuerpo'>
+            <div id="tablero">
+            traps
+            {Object.values(player).map(p => 
+              (
+                <Players
+                    color={p.color}
+                    pos={p.pos}
+                />
+              )
+            )}
+            {Object.values(tiles).map(item => (
+            <Tiles
+                key={item.pos}
+                pos={item.pos}
+                state={item.status}
+            />
+              )
+            )}
+            {Object.values(trap).map(tt => (
+            <Traps
+                pos={tt.pos}
+            />
+              )
+            )}
 
-            {msg.length > 0 && <div className="successMsg"> {msg} </div>}
-            <div className='cuerpo'>
-                <div id="tablero">
-                    traps
-                    {Object.values(player).map(p =>
-                        (
-                            <Players
-                                color={p.color}
-                                pos={p.pos}
-                            />
-                        )
-                    )}
-                    {Object.values(tiles).map(item => (
-                            <Tiles
-                                key={item.pos}
-                                pos={item.pos}
-                                state={item.status}
-                            />
-                        )
-                    )}
-                    {Object.values(trap).map(tt => (
-                            <Traps
-                                pos={tt}
-                            />
-                        )
-                    )}
-
-
-                </div>
-                <div className='divBar'>
-                    <p className='codigo'>Código: {code}</p>
-                    <p className='icon start' onClick={Start}>Start</p>
-
-                </div>
+            
+            </div>
+            <div className='divBar'>
+            <p className='codigo'>Código: {code}</p>
+            <p className='icon start' onClick={Start}>Start</p>
+            </div>
+                                </div>
 
                 <div className="gamebar">
                     {Object.values(color).map(c =>
@@ -306,13 +298,9 @@ function Tablero() {
 
 
                 </div>
-            </div>
 
         </GameContext.Provider>
     )
 }
 
-
 export default Tablero
-
-

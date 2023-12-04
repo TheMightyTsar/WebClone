@@ -140,7 +140,9 @@ function Rules(){
             </ul>
         </div>
         </div>
+        <div className='divfoot'>
         <footer>IIC2513Games</footer>
+        </div>
         </div>
         </>
 

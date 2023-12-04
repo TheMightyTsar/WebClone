@@ -6,9 +6,9 @@ function LandingPage() {
         <>
         <h1 className='title'>Bienvenid@s!!</h1>
 
-        
+        <div>
         <div className="gameLogo">
-
+        </div>
         </div>
         </>
     )
